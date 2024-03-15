@@ -1,0 +1,37 @@
+
+package poo_liquidacion_ejercicio_resuelto10;
+
+import java.util.Scanner;
+
+public class POO_Liquidacion_Ejercicio_Resuelto10 {
+
+
+    public static void main(String[] args) {
+        Scanner liquidacion = new Scanner(System.in);
+        
+        int num_inscripcion, estrato, patrimonio;
+        String nombre;
+        double matricula;
+                
+        System.out.println("Ingrese el numero de inscripcion del estudiante: ");
+        num_inscripcion = liquidacion.nextInt();
+        System.out.println("Ingrese el nombre del estudiante: ");
+        nombre = liquidacion.next();
+        System.out.println("Ingrese el estrato social del estudiante: ");
+        estrato = liquidacion.nextInt();
+        System.out.println("Ingrese el patrimonio del estudiante: ");
+        patrimonio = liquidacion.nextInt();
+        
+        
+        
+        if (patrimonio > 2000000 && estrato > 3){
+            matricula = 50000 + (patrimonio * 0.03);
+            System.out.println("El valor del pago por matricula del estudiante es: " + matricula );
+        }
+         else
+        {matricula = 50000;
+        System.out.println("El valor del pago por matricula del estudiante es: " + matricula );
+        }
+    liquidacion.close();
+}
+}
